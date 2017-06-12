@@ -13,8 +13,9 @@ struct TreeNode {
 	TreeNode *right;
 };
 
-/// 定义栈
 typedef BinTree ElementType;
+
+/// 定义栈
 struct LinkStack
 {
 	ElementType data;
@@ -263,32 +264,35 @@ int postOrderGetHeight(BinTree bt)
 	{
 		leftHeight = postOrderGetHeight(bt->left);
 		rightHeight = postOrderGetHeight(bt->right);
+		printf("tree: %d, left: %d, right: %d \n", bt->data, leftHeight, rightHeight);
 		treeHeight = leftHeight > rightHeight ? leftHeight : rightHeight;
+
 		return treeHeight + 1;
 	}
 	else
 		return 0;
 }
 
-int main(int argc, char const *argv[])
-{
-	// 创建
-	BinTree bt = create(1);
+// int main(int argc, char const *argv[])
+// {
+// 	// 创建
+// 	BinTree bt = create(1);
 
-	// 递归遍历
-	// preOrderTraversal(bt);
-	// inOrderTraversal(bt);
-	// postOrderTraversal(bt);
+// 	// 递归遍历
+// 	// preOrderTraversal(bt);
+// 	// inOrderTraversal(bt);
+// 	// postOrderTraversal(bt);
 
-	// 非递归遍历
-	// inOrderTraversalNonRecursion(bt);
-	// postOrderTraversalNonRecursion(bt);
+// 	// 非递归遍历
+// 	// inOrderTraversalNonRecursion(bt);
+// 	// postOrderTraversalNonRecursion(bt);
 
-	// levelOrderTraversal(bt);
+// 	// 层序遍历
+// 	levelOrderTraversal(bt);
 
-	// 树高
-	int height = postOrderGetHeight(bt);
-	printf("tree height: %d\n", height);
+// 	// 树高
+// 	// int height = postOrderGetHeight(bt);
+// 	// printf("tree height: %d\n", height);
 
-	return 0;
-}
+// 	return 0;
+// }
