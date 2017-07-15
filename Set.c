@@ -7,6 +7,7 @@
 	用树结构表示集合，树的每个结点代表一个集合元素。
 	使用双亲表示法：孩子指向双亲
 */
+
 #define MAXSIZE 10 // 集合最大元素个数
 
 typedef int ElementType;
@@ -25,7 +26,7 @@ int find(SetType set[], ElementType element)
 
 	for (i = 0; i < MAXSIZE && element != set[i].data; ++i)
 	{
-		
+		// 里面啥也不干...
 	}
 
 	if (i >= MAXSIZE)
@@ -35,7 +36,7 @@ int find(SetType set[], ElementType element)
 
 	for (; set[i].parent >= 0; i = set[i].parent)
 	{
-		
+		// 里面啥也不干...
 	}
 
 	return i;
