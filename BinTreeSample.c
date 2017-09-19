@@ -131,7 +131,7 @@ BinTree create(int i)
 		bt->left = create(2 * i);
 		bt->right = create(2 * i + 1);
 	}
-
+	
 	return bt;
 }
 
@@ -170,7 +170,7 @@ void postOrderTraversal(BinTree bt)
 
 /////////////////////// 非递归遍历 ///////////////////////
 
-/// 中序非递归遍历
+/// 先序、中序非递归遍历
 void inOrderTraversalNonRecursion(BinTree bt)
 {
 	BinTree tree = bt;
@@ -273,26 +273,26 @@ int postOrderGetHeight(BinTree bt)
 		return 0;
 }
 
-// int main(int argc, char const *argv[])
-// {
-// 	// 创建
-// 	BinTree bt = create(1);
+int main(int argc, char const *argv[])
+{
+	// 创建
+	BinTree bt = create(1);
 
-// 	// 递归遍历
-// 	// preOrderTraversal(bt);
-// 	// inOrderTraversal(bt);
-// 	// postOrderTraversal(bt);
+	// 递归遍历
+	// preOrderTraversal(bt);
+	// inOrderTraversal(bt);
+	postOrderTraversal(bt);
 
-// 	// 非递归遍历
-// 	// inOrderTraversalNonRecursion(bt);
-// 	// postOrderTraversalNonRecursion(bt);
+	// 非递归遍历
+	// inOrderTraversalNonRecursion(bt);
+	// postOrderTraversalNonRecursion(bt);
 
-// 	// 层序遍历
-// 	levelOrderTraversal(bt);
+	// 层序遍历
+	levelOrderTraversal(bt);
 
-// 	// 树高
-// 	// int height = postOrderGetHeight(bt);
-// 	// printf("tree height: %d\n", height);
+	// 树高
+	// int height = postOrderGetHeight(bt);
+	// printf("tree height: %d\n", height);
 
-// 	return 0;
-// }
+	return 0;
+}

@@ -169,48 +169,48 @@ ElementType deleteMaxHeap(MaxHeap heap)
 	return maxItem;
 }
 
-int main(int argc, char const *argv[])
-{
-	int maxSize = 6;
+// int main(int argc, char const *argv[])
+// {
+// 	int maxSize = 6;
 	
-	int m = 100, s = 5;
-    srand(s); //设置随机数种子
-    int list[maxSize]; // 随机数数组
-    for (int i = 0; i < maxSize; ++i)
-    {
-    	list[i] = rand() % m;
-    }
+// 	int m = 100, s = 5;
+//     srand(s); //设置随机数种子
+//     int list[maxSize]; // 随机数数组
+//     for (int i = 0; i < maxSize; ++i)
+//     {
+//     	list[i] = rand() % m;
+//     }
 
 
-	// // 创建
-	// MaxHeap heap = createEmpty(maxSize);
+// 	// // 创建
+// 	// MaxHeap heap = createEmpty(maxSize);
 
 
-	// // start = clock();
-	// // 插入
-	// for (int i = 1; i <= maxSize; ++i)
-	// {
-	// 	int item = list[i - 1];
-	// 	insert(item, heap);
-	// }
-	// // stop = clock();
-	// // printf("tick: %f\n", (double)(stop - start)); // 测试插入耗费的时间
+// 	// // start = clock();
+// 	// // 插入
+// 	// for (int i = 1; i <= maxSize; ++i)
+// 	// {
+// 	// 	int item = list[i - 1];
+// 	// 	insert(item, heap);
+// 	// }
+// 	// // stop = clock();
+// 	// // printf("tick: %f\n", (double)(stop - start)); // 测试插入耗费的时间
 
-	// 建立
-	MaxHeap heap = buildMaxHeap(maxSize);
+// 	// 建立
+// 	MaxHeap heap = buildMaxHeap(maxSize);
 
-	// // 删除
-	// for (int i = 0; i < maxSize; ++i)
-	// {
-	// 	ElementType item = deleteMaxHeap(heap);
-	// 	printf("delete: %d\n", item);
-	// }
+// 	// // 删除
+// 	// for (int i = 0; i < maxSize; ++i)
+// 	// {
+// 	// 	ElementType item = deleteMaxHeap(heap);
+// 	// 	printf("delete: %d\n", item);
+// 	// }
 	
 
-	for (int i = 0; i <= heap->size; ++i)
-	{
-		printf("%d\n", heap->elements[i]);
-	}
+// 	for (int i = 0; i <= heap->size; ++i)
+// 	{
+// 		printf("%d\n", heap->elements[i]);
+// 	}
 
-	return 0;
-}
+// 	return 0;
+// }

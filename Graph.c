@@ -223,15 +223,15 @@ void linkedBFS(LinkedGraph g, int i)
 		v = deleteQueue(q);
 		printf("BFS: %d, %p\n", v->index, v);
 		
-		v = g->vertexList[v->index];
-		while(v)
+		Vertex u = g->vertexList[v->index];
+		while(u)
 		{
-			if (Visited[v->index] != TRUE)
+			if (Visited[u->index] != TRUE)
 			{
-				Visited[v->index] = TRUE;
-				addQueue(q, v);
+				Visited[u->index] = TRUE;
+				addQueue(q, u);
 			}
-			v = v->next;
+			u = u->next;
 		}
 	}
 }
@@ -249,9 +249,6 @@ void listComponents(LinkedGraph g)
 	}
 }
 
-/// 无权图的单源最短路算法
-
-
 int main(int argc, char const *argv[])
 {
 	///////// 邻接矩阵的操作 /////////
@@ -261,11 +258,11 @@ int main(int argc, char const *argv[])
 
 	///////// 邻接表的操作 /////////
 
-	LinkedGraph g= createLinkedGraph(10);
+	LinkedGraph g = createLinkedGraph(10);
 
 	// linkedDFS(g, 2);
 
-	// linkedBFS(g, 2);
+	linkedBFS(g, 2);
 
 	// listComponents(g);
 
