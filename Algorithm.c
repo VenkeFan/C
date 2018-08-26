@@ -27,6 +27,15 @@ void swap(int *a, int *b)
 	*b = temp;
 }
 
+void swap2(int a, int b)
+{
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
+
+	printf("a = %d, b = %d\n", a, b);
+}
+
 /// 斐波纳契（递归）
 long fibonacciRecursive(int n)
 {
@@ -189,7 +198,7 @@ int main(int argc, char const *argv[])
 {
 	// 斐波纳契数列
 	// {
-	// 	int count = 64;
+	// 	int count = 9;
 	// 	// for (int i = 0; i < count; ++i)
 	// 	// {
 	// 	// 	printf("recursion fibonacciRecursive(%d) = %d\n", i, fibonacciRecursive(i));
@@ -203,10 +212,10 @@ int main(int argc, char const *argv[])
 
 
 	// Hailstone问题
-	{
-		int length = hailstone(27);
-		printf("hailstone length: %d\n", length);
-	}
+	// {
+	// 	int length = hailstone(27);
+	// 	printf("hailstone length: %d\n", length);
+	// }
 
 	// int array[] = {19, 12, 30, 9, 6, 25, 15, 36, 59, 10, 78, 65, 46, 99, 83, 66};
 	// int length = sizeof(array) / sizeof(array[0]);
@@ -224,6 +233,8 @@ int main(int argc, char const *argv[])
 	// {
 	// 	printf("%d\n", array[i]);
 	// }
+
+	swap2(3, 4);
 
 	return 0;
 }
