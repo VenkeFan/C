@@ -46,5 +46,6 @@ int NumberOf1Between1AndN_Solution(int n){
 }
 
 int main() {
-
+	int a = 2^4^5^6;
+	printf("%d\n", a);
 }
