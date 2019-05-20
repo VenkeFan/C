@@ -179,8 +179,44 @@ void bucketSort(int array[], int left, int right) {
 	// else {other sort}
 }
 
+/// 斐波纳契（递归）
+long long fibonacciRecursive(int n) {
+	return n < 2 ? n : fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+}
+
+/// 斐波纳契（迭代）
+long long fibonacciIter(int n) {
+	if (n < 2) {
+		return n;
+	}
+
+	long long n0 = 0, n1 = 1;
+
+	for (int i = 1; i < n; ++i) {
+		n1 = n0 + n1;
+		n0 = n1 - n0;
+	}
+
+	return n1;
+}
+
 int main()
 {
+	{
+		//斐波纳契数列
+		int count = 5;
+		// for (int i = 0; i < count; ++i)
+		// {
+		// 	printf("recursion fibonacciRecursive(%d) = %d\n", i, fibonacciRecursive(i));
+		// }
+		printf("==========================================\n");
+		for (int i = 0; i < count; ++i)
+		{
+			printf("iter fibonacciIter(%d) = %lld\n", i, fibonacciIter(i));
+		}
+		return 0;
+	}
+
    	//int array[] = {98, 36, 12, 30, 9, 6, 25, 15, 19, 59, 10, 78, 65, 46, 99, 83, 66};
 	int array[] = {3,0,8,4,5,6,1,5,5};
 	//int array[] = {3,2,1,4};
